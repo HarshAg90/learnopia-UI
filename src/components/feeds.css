@@ -1,0 +1,124 @@
+#feeds>.timeline>button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding-right: 20px;
+}
+#feeds>.timeline>button>h1.selected{
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
+#feeds>.timeline>button>h1{
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.478);
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+#feeds>.timeline>button>h1:hover{
+    color: rgba(0, 0, 0, 0.809);
+
+}
+#feeds .post{
+    margin-bottom: 30px;
+}
+#feeds .content{
+    background-color: #f8f8f8;
+    border: 1px solid rgb(171, 171, 171);
+    border-radius: 5px;
+    transition: 100ms ease;
+    padding: 20px;
+}
+
+#feeds .content:hover{
+    box-shadow: 0 0 5px rgba(128, 128, 128, 0.459);
+    transition: 100ms ease;
+}
+#feeds .title{
+    margin-bottom: 10px;
+    display: flex;
+    transition: 100ms ease;
+}
+#feeds .title:hover{
+    color: rgb(1, 100, 181);
+    transition: 100ms ease;
+}
+#feeds .title .type{
+    border-radius: 10px;
+    font-weight: 450;
+    padding-left:10px;
+    padding-right: 10px;
+    
+}
+#feeds .title .Tutuorial{
+    background-color: #fae17d;
+    color: white;
+}
+.content button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(0, 128, 0, 0.765);
+}
+.endBar{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.endBar .tags{
+    display: flex;
+}
+.endBar .tags .tag{
+    margin: 5px;
+    font-style: italic;
+    font-weight: 500;
+    color: rgb(41, 41, 41);
+}
+
+
+#feeds .title h1{
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-right: 10px;
+}
+.tail-bar{
+    display: flex;
+    align-items: center;
+}
+.tail-bar button{
+    outline: none;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+}
+.tail-bar button.subscribe{
+    background-color: palevioletred;
+    font-size: 1.1rem;
+    padding: 5px;
+    padding-left: 25px;
+    padding-right:25px;
+    color: white;
+    border-radius: 5px;
+    transition: 100ms ease;
+}
+.tail-bar button.subscribe:hover{
+    background-color: rgb(202, 74, 117);
+    box-shadow: 5px 5px 10px rgba(94, 94, 94, 0.443);
+    transition: 100ms ease;
+}
+.tail-bar button svg{
+    height:1.8rem;
+}
+.tail-bar button.like svg:hover{
+    fill:rgb(206, 24, 85);
+}
+.tail-bar button.star svg:hover{
+    fill:rgb(218, 200, 0);
+}
+.tail-bar button.save svg:hover{
+    fill:rgb(24, 194, 206);
+}

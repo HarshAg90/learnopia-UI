@@ -1,0 +1,32 @@
+#tags {
+  height: fit-content;
+  padding: 15px;
+  margin: 20px;
+  box-sizing: content-box;
+  border-radius: 10px;
+  background-color:#ffffff;
+}
+#tags h1 {
+  font-weight: 300;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+#tags .tags {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+}
+#tags .tags button {
+  margin: 5px;
+  border: none;
+  font-style: italic;
+  outline: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+#tags .tags button:hover{
+  font-weight: 600;
+}
+
