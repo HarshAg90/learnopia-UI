@@ -1,13 +1,24 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LoginSignup from "./components/LoginSignup";
-import Home from "./components/Home";
-import Admin from "./components/admin";
-import Profile from "./components/Profile";
+import LoginSignup from "./components/login/LoginSignup";
+import Home from "./components/home/Home";
+import Admin from "./components/profile/admin";
+import Profile from "./components/profile/Profile";
 import "./App.css";
 
 const App = () => {
   const [isAuthenticated, authenticate] = useState(false);
+  //   if (!isAuthenticated) return <Navigate to="/login" />;
+  function setLoggedInState(loggedIn) {
+    localStorage.setItem("logged_in", loggedIn);
+    authenticate(true);
+  }
+  // Function to check if the user is logged in
+  function isLoggedIn() {
+    const loggedIn = localStorage.getItem("logged_in");
+    authenticate(loggedIn === "true");
+    return loggedIn === "true";
+  }
   return (
     <BrowserRouter>
       <Routes>
@@ -15,7 +26,7 @@ const App = () => {
           path="/"
           element={
             <Home
-              isAuthenticated={isAuthenticated}
+              isLoggedIn={isLoggedIn}
               authenticate={authenticate}
             />
           }
@@ -25,7 +36,7 @@ const App = () => {
           element={
             <LoginSignup
               isAuthenticated={isAuthenticated}
-              authenticate={authenticate}
+              setLoggedInState={setLoggedInState}
             />
           }
         />

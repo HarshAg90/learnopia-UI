@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
 import "./login.css";
 
-export default function LoginSignup({ isAuthenticated, authenticate }) {
+export default function LoginSignup({ isAuthenticated, setLoggedInState }) {
   let [username, changename] = useState("");
   let [pass, changepass] = useState("");
   if (isAuthenticated) {
@@ -13,7 +13,7 @@ export default function LoginSignup({ isAuthenticated, authenticate }) {
     console.log(username + "," + pass);
     if (username === "harsh" && pass === "harsh") {
       console.log("Login successfull");
-      authenticate(true);
+      setLoggedInState(true);
       return <Navigate to="/" />;
     }
   };

@@ -1,13 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link,Navigate } from "react-router-dom";
 import "./home.css";
 import Feeds from "./feeds";
-import Tags from "./tags";
-import News from "./news";
-// import { Redirect } from "react-router";
+import Tags from "../tags/tags";
+import News from "../news/news";
+import { Redirect } from "react-router";
 
-export default function Home({ isAuthenticated }) {
-  //   if (!isAuthenticated) return <Navigate to="/login" />;
+export default function Home({ isLoggedIn }) {
+  if (!isLoggedIn()) return <Navigate to="/login" />;
+
   return (
     <div>
       <nav>
