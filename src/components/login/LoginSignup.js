@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import "./login.css";
 
 export default function LoginSignup({ isAuthenticated, setLoggedInState }) {
+  useEffect(() => {
+    alert("THIS IS A DEVELOPEMT SERVER,\nPlease use 'harsh' as id and password");
+  }, []);
   let [username, changename] = useState("");
   let [pass, changepass] = useState("");
   if (isAuthenticated) {
@@ -17,7 +20,6 @@ export default function LoginSignup({ isAuthenticated, setLoggedInState }) {
       return <Navigate to="/" />;
     }
   };
-
   return (
     <div id="login-page">
       <div className="info">
