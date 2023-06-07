@@ -20,6 +20,7 @@ a platform dedicated to create a specific domain providing free education resour
 - cource/class seperated
 - open education blogs and posts
 - video/image posts
+- video/image posts
 - youtube embeding
 - text message to community
 - follow and support to creator enabled

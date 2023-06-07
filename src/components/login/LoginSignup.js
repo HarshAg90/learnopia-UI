@@ -25,6 +25,7 @@ export default function LoginSignup({ isAuthenticated, setLoggedInState }) {
       <div className="info">
         <h1>EdHub site</h1>
       </div>
+      
       <div className="cred-form">
         <div>
           <div>
